@@ -8,8 +8,8 @@ import time
 class Gosper_curve(Node):
 
     def __init__(self):
-        super().__init__('gospe_curve')
-        self.publisher_ = self.create_publisher(Twist, 'turtle1/cmd_vel',10)
+        super().__init__('curve_drawer')
+        self.publisher_ = self.create_publisher(Twist, 'turtle2/cmd_vel',10)
         self.timer = self.create_timer(1.0, self.publish_twist)
         self.A_rule = "A-B--B+A++AA+B-"
         self.B_rule = "+A-BB--B-A++A+B"
